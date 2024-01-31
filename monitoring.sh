@@ -36,7 +36,7 @@ ulog=$(users | wc -w)
 
 #net
 ip=$(hostname -I)
-mac=$(ip link | grep "link/ether" | awk '{print $2}')
+mac=$(ip link | grep "link/ether" | awk '{print $2}')   #cat /sys/class/net/eth0/address
 
 #sudo
 cmnd=$(journalctl _COMM=sudo | grep COMMAND | wc -l)
